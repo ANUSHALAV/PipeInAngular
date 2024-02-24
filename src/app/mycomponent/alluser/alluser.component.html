@@ -1,0 +1,40 @@
+<main>
+    <div class="container ">
+        <div class="row my-4">
+            <div class="col-12 text-center fs-2 text-success text-capitalize">
+                <p>all users!</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Gender</th>
+                            <th>Phone</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr *ngFor="let user of  users">
+                            <td>{{user.name|custompipe:user.gender}}</td>
+                            <td>{{user.address}}</td>
+                            <td>{{user.gender}}</td>
+                            <td>{{user.phone}}</td>
+                            <td>
+                                <button class="btn btn-primary text-capitalize">edit</button>
+                            </td>
+
+                            <td>
+                                <button class="btn btn-danger text-capitalize">delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
